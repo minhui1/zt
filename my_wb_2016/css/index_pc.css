@@ -1,0 +1,57 @@
+@charset "UTF-8";
+body,
+.b_bg{  width: 100%; height: 100%;  background:#f2f2f5;color:#eb7350;font-family:"Microsoft Yahei"; overflow-x:hidden;}
+.b_bg{ background:#e23838;  }
+.b_bg .containerA{
+	position: relative;
+	width: 1196px;
+	height: 960px;
+	margin: 0 auto 0;
+	text-align: center;
+}
+.b_bg .S_bg2{
+	background-color: #f2f2f5;
+}
+.b_bg .S_txt2{
+	color: #808080;
+    text-decoration: none;
+}
+a, .S_link1, a.S_txt1:hover, a.current .S_txt1, a.S_txt2:hover, .SW_fun:hover .S_func1 {
+    color: #eb7350;
+}
+
+.b_bg .contMax_bg{
+	position: relative;
+    z-index: 5;
+	width: 967px;
+    height: 799px;
+	margin: 0 auto;
+	background: url(../../images/my_wb_2016/contMax_bg.png?id=201612281815) no-repeat;
+	/*background: url(../../images/my_wb_2016/contMax_bg_gup.png?id=201612291940) no-repeat;*/
+    background-size: 100% 100%;
+    background-position: center center; 
+}
+
+.b_bg .con-b{
+	position: absolute;
+	left: -220px;
+    top: 0;
+	width: 631px;
+	height: 799px;
+	background: url(../../images/my_wb_2016/flowerMax_pc.jpg?id=201612281815) no-repeat;
+    background-size: 100% 100%; 
+}
+.b_bg .con-c{
+	position: absolute;
+	z-index: 6;
+	right: -47px;
+    bottom: 155px;
+	width: 480px;
+	height: 468px;
+	background: url(../../images/my_wb_2016/featherMax_pc.png?id=201612281711) no-repeat;
+    background-size: 100% 100%; 
+}
+
+.b_bg .WB_footer{
+	box-shadow: 0 0 0px 0px rgba(0,0,0,0);
+}

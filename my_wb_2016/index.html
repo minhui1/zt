@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+	<title>我在微博的2016</title>
+	<link rel="stylesheet" type="text/css" href="./css/page.css">
+    <script type="text/javascript">
+    ;(function(doc,win,size,int) {
+        var docEle = doc.documentElement,
+            evt = 'onorientationchange' in window ? 'orientationchange' : 'resize',
+            fn = function() {
+                    var width = docEle.clientWidth;
+                    if(width>480){
+                        width=480;
+                    }
+                    if(width>size){
+                        docEle.style.fontSize=int+'px';
+                    }else{
+                        width && (docEle.style.fontSize = width/(size/int) + 'px');
+                    }
+                    win.scrollTo(0,1);
+            };
+        win.addEventListener(evt, fn, false);
+        doc.addEventListener('DOMContentLoaded', fn, false);
+    }(document,window,750,100));
+    var lottermsg = [["\u613f\u4e8b\u4e1a\u98de\u9ec4\u817e\u8fbe\uff0c","\u5bb6\u5ead\u548c\u8c10\u7f8e\u6ee1\uff01"],["\u5e0c\u671b\u5bb6\u4eba\u5f00\u5fc3\u5065\u5eb7\u5e73\u5b89\u5feb\u4e50\uff0c","\u9e21\u5e74\u597d\u8fd0\u3001\u65b0\u5e74\u5927\u559c\uff01"],["\u795d\u613f\u516c\u53f8\u84ec\u52c3\u53d1\u5c55\uff0c","\u4e8b\u4e1a\u98ce\u751f\u6c34\u8d77\uff0c\u65e5\u80dc\u4e00\u65e5"],["\u795d\u5728\u65b0\u7684\u4e00\u5e74\u5b66\u4e1a\u6709\u6210\uff0c","\u5b9e\u73b0\u5fc3\u4e2d\u7684\u68a6\u60f3\uff01"],["\u6211\u60f3\u8131\u79bb\u5355\u8eab\u72d7\u9635\u8425","\u627e\u5230\u771f\u7231\uff0c\u8d70\u4e0a\u4eba\u751f\u5dc5\u5cf0~"],["\u795d\u5168\u5bb6\u65b0\u5e74\u5feb\u4e50\uff01\u8eab\u4f53\u5065\u5eb7\uff01","\u5de5\u4f5c\u987a\u5229\uff01\u5409\u7965\u5982\u610f\uff01"],["\u5b9a\u4e2a\u5c0f\u76ee\u6807\uff0c","\u6bd4\u5982\u5f69\u7968\u4e2d\u4e2a\u4e00\u5343\u4e07\u3002"]];
+        var USER_INFO = {
+            avatar_large : "http://tva1.sinaimg.cn/crop.0.0.180.180.180/6ff2374djw1e8qgp5bmzyj2050050aa8.jpg",
+            islogin      : "1",
+            verify       : 0,
+            uid          : "1878144845",
+            name         : "little5z",
+            lang         : "zh-cn",
+            jsPath       : "http://js.t.sinajs.cn/t5/",
+            cssPath      : "http://img.t.sinajs.cn/t5/",
+            imgPath      : "",
+            _wv          : 6
+        };
+        var closefriends = [];
+    </script>
+    <style>
+    	@media screen and (min-width:320px){html{font-size:43px}}
+		@media screen and (min-width:360px){html{font-size:48px}}
+		@media screen and (min-width:375px){html{font-size:50px}}
+		@media screen and (min-width:414px){html{font-size:55px}}
+		@media screen and (min-width:424px){html{font-size:57px}}
+		@media screen and (min-width:480px){html{font-size:64px}}
+
+    </style>
+</head>
+<body>
+<!-- 页面升级中 start -->
+<!-- <div class="loading" id="loading" style="display: none;">
+    <div class="loading_area">
+        <div class="load_logo">
+            <img src="../../images/my_wb_2016/loading.gif?id=201612281400" alt="">
+        </div>
+        <div class="data">升级中，敬请期待...</div>
+    </div>
+</div> -->
+<!-- 页面升级中 end -->
+<!-- 新增用户头像昵称 start -->
+<div class="boxUsers">
+	<div class="topTips">
+		<div class="pic_box_mar">
+			<div class="m-img-box"> 
+				<div class="pic-box">
+					<img src="http://tva1.sinaimg.cn/crop.0.0.751.751.180/947f3b24jw8f4nn1dofcwj20kv0kvq3v.jpg">
+					<!-- <i class="m-icon m-icon-yellowv"></i> -->
+					<i class="m-icon m-icon-goldv"></i>
+				</div>
+			</div>
+		</div>
+		<em class="secn1_titel">@ECMall欧美汇Wu@夏未未央</em>	
+	</div>
+</div>
+<!-- 新增用户头像昵称 end -->
+<!-- loading start -->
+<div class="loading" id="loading" >
+    <div class="loading_area">
+        <div class="load_logo">
+            <img src="../my_wb_2016/images/loading.gif?id=201612281400" alt="">
+        </div>
+        <div class="data">Loading<em class="figure" id="loading_figure">0%</em></div>
+    </div>
+</div>
+<!-- loading end -->
+<article id="wrapper">
+	<div class="swiper-container">
+		<div data-swiper-parallax="-23%" data-swiper-parallax-duration="3000"></div>
+        <div class="swiper-wrapper">
+        	<!-- 首页 start -->
+			<section class="swiper-slide screen01">
+				<div class="vh_box">
+
+					<div class="secn an_secn1_opt an_dely_tit">
+						<span class="secn secn_pic_title  an_secn1_title"></span>
+					</div>
+					<div class="secn_set_box">
+						<span class="secn_pic_computer an_secn1_computer secn_scale">
+							<img src="../my_wb_2016/images/secn_01_computer.png?id=201612271615" alt="">
+							<!-- <div class="pic_box_mar">
+								<div class="m-img-box"> 
+									<div class="pic-box">
+										<img src="http://tva1.sinaimg.cn/crop.0.0.751.751.180/947f3b24jw8f4nn1dofcwj20kv0kvq3v.jpg">
+										<i class="m-icon m-icon-yellowv"></i>
+									</div>
+								</div>
+							</div>
+							<em class="secn1_titel">@ECMall欧美汇Wu@夏未未央</em> -->	
+						</span>
+						<div class="secn secn_konami_box an_secn1_opt an_dely_konami">
+							<span class=" secn_twist_konami an_twist_konami"></span>
+							<span class=" secn_jump_konami an_jump_konami"></span>
+						</div>
+					</div>
+					<div class="secn_pic_lf" data-swiper-parallax="-100">
+						<div class="secn_top_bot an_tbot">
+							<span class="secn_pic_lf an_lf">
+								<img src="../my_wb_2016/images/secn_01_scene_lf.png?id=201612271615" alt="">
+							</span>
+						</div>
+					</div>
+
+					<div class="secn_pic_rg" data-swiper-parallax="-300">
+						<div class="secn_top_bot rg_tbot an_tbot">
+							<span class="secn_pic_rg an_rg">
+								<img src="../my_wb_2016/images/secn_01_scene_rg.png?id=201612271615" alt="">
+							</span>
+						</div>
+					</div>
+
+					
+					<div id="btn" class="secn secn_btn_box an_secn1_opt an_dely_btn">
+						<span class="secn_btn">
+							<img src="../my_wb_2016/images/secn_01_btn.png?id=201612271615" alt="">
+						</span>
+						<span class="secn_btn an_btn">
+							<img src="../my_wb_2016/images/secn_01_btn.png?id=201612271615" alt="">
+						</span>
+					</div>
+					<span class="secn secn_bottxt an_secn1_opt dely_senc1_txt">
+						<img src="../my_wb_2016/images/secn_01_bottxt.png?id=2201612271615" alt="">
+					</span>
+
+
+				</div> 
+						
+			</section>
+			<!-- 首页 end -->
+			
+			<!-- 年度发博总数 start -->
+			<section class="swiper-slide screen02">
+				<div class="vh_box">
+					<div class="visit_book">
+						<span class="secn_pic_book an_secn2_book">
+							<img src="../my_wb_2016/images/secn_02_book.jpg?id=201612271720" alt="">
+						</span>
+					</div>
+					
+					<div class="cd_box an_rg">
+						<div class="secn_pic_cd" data-swiper-parallax="-200">
+							<div class="senc_tpey senc_tpey_lf">
+								<span class="senc_t_img sec_light"></span>
+								<span class="senc_t_img sec_axis an_tape an_dely_tape"></span>
+							</div>
+							<div class="senc_tpey senc_tpey_rg">
+								<span class="senc_t_img sec_light"></span>
+								<span class="senc_t_img sec_axis an_tape an_dely_tape"></span>
+							</div>						
+						</div>
+					</div>
+					
+
+					<div class="visit_top" data-swiper-parallax="-100">
+						<span class="secn_pic_pen an_lf">
+							<img src="../my_wb_2016/images/secn_02_pen.png?id=201612271615" alt="">
+						</span>
+					</div>
+					
+					<span class="secn_pic_sun an_secn1_opt an_dely_tape">
+						<em class="secn_sun01"></em>
+						<em class="secn_sun02 an_sun"></em>
+					</span>
+					<span class="secn secn_pic_titile an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_02_titile.png?id=201612301514" alt="">
+					</span>
+					<div class="num an_secn1_opt an_dely_scen2">
+						<!-- <div>
+							<em class="an_num an_f_num0">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div>
+						<div class="dot">
+							<em class="an_num an_f_num0">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div> -->
+						<div>
+							<em class="an_num an_f_num8">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div>
+						<div>
+							<em class="an_num an_f_num1">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div>
+						<em class="amount">万</em>
+					</div>
+					<span class="secn_pic_wblogo an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_02_wblogo.png?id=201612271615" alt="">
+					</span>
+					<span class="secn secn_pic_txt public_txt an_secn1_opt">
+						<!-- <p>在不经意间，</p>
+						<p>已经记下了不少的点滴小事！</p> -->
+						<p>被阅读总数</p>
+						<p>战胜了<em>30%</em>的微博用户</p>
+					</span>
+
+				</div>
+				<div class="secn-arrow-bottom">
+					<span class="uparr_box"><img src="../my_wb_2016/images/arrow-bottom.png?id=201612271615" alt=""></span>
+				</div>
+			</section>
+			<!-- 年度发博总数 end -->
+
+			<!-- 转评赞 start -->
+			<section class="swiper-slide screen05">
+				<div class="vh_box">
+					<span class="secn_bg an_secn2_book">
+						<img src="../my_wb_2016/images/secn_05_bg.png?id=201612271615" alt="">
+					</span>
+					<div class="visit_zambia" data-swiper-parallax="-220">
+						<span class="secn_pic_zambia an_lf">
+							<img src="../my_wb_2016/images/secn_05_zambia.png?id=201612271615" alt="">
+						</span>
+					</div>
+					<span class="secn_pic_wblogo an_secn2_book">
+						<img src="../my_wb_2016/images/secn_02_wblogo.png?id=201612271615" alt="">
+					</span>
+					<div class="visit_cloud" data-swiper-parallax="-200">
+						<div class="secn_float an_cloud dely_crown">
+							<span class="secn_pic_cloud an_rg_cloud">
+								<img src="../my_wb_2016/images/secn_05_cloud.png?id=201612271615" alt="">
+							</span>
+						</div>
+					</div>
+						
+					<div class="secn_list">
+						<dl>
+							<dt class="secn_pic_txtzf an_secn1_opt">
+								<img src="../my_wb_2016/images/secn_05_txtzf.png?id=201612301514" alt="">
+							</dt>
+							<dd class="secn_num_zf">
+								<div class="num an_secn1_opt an_dely_scen2">
+									<!-- 数字为0 样式 start -->
+									<div class="zero">
+										<em class="an_num an_f_num0">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<!-- 数字为0 样式 end -->
+									<!-- <div>
+										<em class="an_num an_f_num4">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num5">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num8">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num1">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div> -->
+									<!-- <em class="amount-rg">万</em> -->
+								</div>
+							</dd>
+							<dt class="secn_pic_txtpl an_secn1_opt">
+								<img src="../my_wb_2016/images/secn_05_txtpl.png?id=201612301514" alt="">
+							</dt>
+							<dd class="secn_num_pl">
+								<div class="num an_secn1_opt an_dely_scen2">
+									<div class="dot">
+										<em class="an_num an_f_num8">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num2">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num0">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num3">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<em class="amount-rg">万</em>
+								</div>
+							</dd>
+							<dt class="secn_pic_txtdz an_secn1_opt">
+								<img src="../my_wb_2016/images/secn_05_txtdz.png?id=201612301514" alt="">
+							</dt>
+							<dd class="secn_num_dz">
+								<div class="num an_secn1_opt an_dely_scen2">
+									<!-- <div>
+										<em class="an_num an_f_num9">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num1">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div> -->
+									<div>
+										<em class="an_num an_f_num2">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<div>
+										<em class="an_num an_f_num0">
+											<span class="m-font m-font-num-0"></span>
+											<span class="m-font m-font-num-1"></span>
+											<span class="m-font m-font-num-2"></span>
+											<span class="m-font m-font-num-3"></span>
+											<span class="m-font m-font-num-4"></span>
+											<span class="m-font m-font-num-5"></span>
+											<span class="m-font m-font-num-6"></span>
+											<span class="m-font m-font-num-7"></span>
+											<span class="m-font m-font-num-8"></span>
+											<span class="m-font m-font-num-9"></span>
+										</em>
+									</div>
+									<!-- <em class="amount-rg">万</em> -->
+								</div>
+							</dd>
+						</dl>
+						<ul class="icon_box">
+							<li class="secn_zf_box">
+								<div class="secn_ic_zf an_zf_top">
+									<span class="secn_ic_zf an_icon an_ic_zf"></span>
+								</div>
+							</li>
+							<li class="secn_pl_box">
+								<div class="secn_ic_pl an_pl_top">
+									<span class="secn_ic_pl an_icon an_ic_pl"></span>
+								</div>
+							</li>
+							<li class="secn_dz_box">
+								<div class="secn_ic_dz an_dz_top">
+									<span class="secn_ic_dz an_icon an_ic_dz"></span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<span class="secn secn_pic_txt public_txt an_secn1_opt">
+						<p>我在微博的影响力</p>
+						<p>超过了我<em>69%</em>的好友!</p>
+					</span>
+				</div>
+				<div class="secn-arrow-bottom">
+					<span class="uparr_box"><img src="../my_wb_2016/images/arrow-bottom.png?id=201612271615" alt=""></span>
+				</div>
+			</section>
+			<!-- 转评赞 end -->
+
+			<!-- 个人年度发博阅读数 start -->
+			<section class="swiper-slide screen03">
+				<div class="vh_box">
+					<span class="secn_pic_calendar an_secn_lf">
+						<img src="../my_wb_2016/images/secn_03_calendar.jpg?id=201612271720" alt="">
+					</span>
+					<div class="visit_crown" data-swiper-parallax="-130">
+						<div class="secn_float an_tbot dely_crown">
+							<span class="secn_pic_crown an_rg">
+								<img src="../my_wb_2016/images/secn_03_crown.png?id=201612271615" alt="">
+							</span>
+						</div>
+					</div>	
+					<span class="secn secn_pic_fans an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_03_fans.png?id=201612301514" alt="">
+					</span>
+					<span class="secn_pic_wblogo an_secn_lf">
+						<img src="../my_wb_2016/images/secn_02_wblogo.png?id=201612271615" alt="">
+					</span>
+					<div class="num an_secn1_opt an_dely_scen2">
+						<div class="dot">
+							<em class="an_num an_f_num4">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div>
+						<div>
+							<em class="an_num an_f_num5">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div>
+						<div>
+							<em class="an_num an_f_num8">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div>
+						<div>
+							<em class="an_num an_f_num1">
+								<span class="m-font m-font-num-0"></span>
+								<span class="m-font m-font-num-1"></span>
+								<span class="m-font m-font-num-2"></span>
+								<span class="m-font m-font-num-3"></span>
+								<span class="m-font m-font-num-4"></span>
+								<span class="m-font m-font-num-5"></span>
+								<span class="m-font m-font-num-6"></span>
+								<span class="m-font m-font-num-7"></span>
+								<span class="m-font m-font-num-8"></span>
+								<span class="m-font m-font-num-9"></span>
+							</em>
+						</div>
+						<em class="amount">万</em>
+					</div>
+					<span class="secn secn_pic_txt public_txt an_secn1_opt">
+						<!-- <p>被大家看了这么多次呀，</p>
+						<p>新的一年我要发布更多的内容！</p> -->
+						<p>被阅读总数</p>
+						<p>战胜了<em>30%</em>的微博用户</p>
+					</span>
+					<div class="visit_pencil" data-swiper-parallax="-150">
+						<div class="pob_bounce an_tbot dely_crown">	
+							<span class="secn_pic_img an_lf">
+								<img src="../my_wb_2016/images/secn_03_pencil.png?id=201612271615" alt="">
+							</span>
+						</div>
+					</div>	
+					<div class="shift_box an_secn1_opt an_dely_scen2">
+						<span class="secn_shift_bg an_shift_pic dely_komin"></span>
+					</div>
+					
+					<div class="spring_box an_secn1_opt an_dely_scen2">
+						<span class="secn_spring_bg an_spring_pic dely_spring"></span>
+					</div>
+				</div>
+				<div class="secn-arrow-bottom">
+					<span class="uparr_box"><img src="../my_wb_2016/images/arrow-bottom.png?id=201612271615" alt=""></span>
+				</div>
+			</section>
+			<!-- 个人年度发博阅读数 end -->
+
+			<!-- 亲密好友 start -->
+			<section class="swiper-slide screen04">
+				<div class="vh_box">
+					<span class="secn_bg_letter an_secn2_book">
+						<img src="../my_wb_2016/images/secn_04_letter.png?id=201612271615" alt="">
+					</span>
+					<div class="visit_flower" data-swiper-parallax="-220">
+						<span class="secn_pic_flower an_lf">
+							<img src="../my_wb_2016/images/secn_04_flower.png?id=201612271615" alt="">
+						</span>
+					</div>
+					<span class="secn secn_wblogo an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_04_logo.png?id=201612271615" alt="">
+					</span>
+					<span class="secn secn_element an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_04_element.png?id=201612271615" alt="">
+					</span>
+					<span class="secn secn_title an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_04_title.png?id=201612301514" alt="">
+					</span>
+					<span class="secn secn_txt an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_04_txt.png?id=201612271615" alt="">
+					</span>
+					<div class="head_img an_secn1_opt an_dely_scen2">
+
+						<div>
+							<div class="m-img-box"> 
+								<div class="pic-box">
+									<img src="http://tva1.sinaimg.cn/crop.0.0.751.751.180/947f3b24jw8f4nn1dofcwj20kv0kvq3v.jpg">
+									<i class="m-icon m-icon-bluev"></i>
+								</div>
+							</div>
+
+							<span class="secn_bam b-boo01">
+								<em class="secn_bam01_pic an_bamboo1"></em>
+							</span>
+							<span class="secn_name">
+								<h3 class="m-text-cut b-tit">ECMall欧美汇Wu@夏未未央</h3>
+							</span>
+						</div>
+
+
+						<div>
+							<div class="m-img-box"> 
+								<div class="pic-box">
+									<img src="http://tva1.sinaimg.cn/crop.0.0.751.751.180/947f3b24jw8f4nn1dofcwj20kv0kvq3v.jpg">
+									<i class="m-icon m-icon-yellowv"></i>
+								</div>
+							</div>
+							<span class="secn_bam b-boo02">
+								<em class="secn_bam02_pic an_bamboo2"></em>
+							</span>
+							<span class="secn_name">
+								<h3 class="m-text-cut b-tit">@夏未未央</h3>
+							</span>
+						</div>
+						
+						<div>
+							<div class="m-img-box"> 
+								<div class="pic-box">
+									<img src="http://tva1.sinaimg.cn/crop.0.0.751.751.180/947f3b24jw8f4nn1dofcwj20kv0kvq3v.jpg">
+									<i class="m-icon m-icon-goldv"></i>
+								</div>
+							</div>
+							<span class="secn_bam b-boo03">
+								<em class="secn_bam03_pic an_bamboo3"></em>
+							</span>
+							<span class="secn_name">
+								<h3 class="m-text-cut b-tit">@夏未未央</h3>
+							</span>
+						</div>
+					</div>
+					<span class="secn_pic_bookmark an_rg_bookmark">
+						<img src="../my_wb_2016/images/secn_04_bookmark.png?id=201612271615" alt="">
+					</span>
+
+					<div class="land_box">
+						<div class="secn_l_posit an_tit_opty an_secn4_deay">
+							<div class="secn_land_box an_land_pic">
+								<span class="secn_land"></span>
+								<span class="secn_bam b-boo02">
+									<em class="secn_bam02_pic an_bamboo2"></em>
+								</span>
+							</div>
+						</div>
+						<div class="secn_pension an_secn1_opt dely_suspen">
+							<div class="secn_float_4 ">
+								<span class="secn_suspen_pic an_suspen dely_suspen"></span>
+							</div>
+						</div>
+					</div>
+					
+
+					<span class="secn secn_pic_txt public_txt an_secn1_opt">
+						<p>我的好友加V的有<em>99人</em></p>
+						<p>我先去申请个吧! </p>
+					</span>
+				</div>
+				<div class="secn-arrow-bottom">
+					<span class="uparr_box"><img src="../my_wb_2016/images/arrow-bottom.png?id=201612271615" alt=""></span>
+				</div>
+			</section>
+			<!-- 亲密好友 end -->
+
+			
+
+			<!-- 最热话题词 start -->
+			<section class="swiper-slide screen06">
+				<div class="vh_box">
+					<span class="secn_bg an_secn_bg">
+						<img src="../my_wb_2016/images/secn_06_bg.jpg?id=201612271720" alt="">
+					</span>
+					<span class="secn_wblogo an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_06_wblogo.png?id=201612271615" alt="">
+					</span>
+					<span class="secn secn_pic_title an_secn1_opt">
+						<img src="../my_wb_2016/images/secn_06_title.png?id=201612301514" alt="">
+					</span>
+					<span class="secn secn_pic_topic an_secn1_opt an_dely_scen6">
+						<ul>
+							<li>#就爱拍拍拍＃</li>
+							<li>#天凉要暖心＃</li>
+							<li>#如果蜗牛有爱情＃</li>
+						</ul>
+					</span>
+					<span class="secn secn_pic_txt public_txt an_secn1_opt">
+						<p>出没在各大话题之中，</p>
+						<p>我就是这么关心时事！</p>
+					</span>
+
+					<div class="secn_rock_box an_secn1_opt an_dely_scen2">
+						<div class="secn_float_rocket an_rocket dely_rocket">
+							<span class="secn_pic_rocket an_rocket_pic"></span>
+						</div>
+					</div>
+					
+
+					<div class="visit_element" data-swiper-parallax="-200">
+						<span class="secn_pic_element an_rg">
+							<img src="../my_wb_2016/images/secn_06_element.png?id=201612271615" alt="">
+						</span>
+					</div>
+					<div class="visit_arrow" data-swiper-parallax="-100">
+						<span class="secn_pic_arrow an_arrow" >
+							<img src="../my_wb_2016/images/secn_06_arrow.png?id=201612271615" alt="">
+						</span>
+					</div>	
+					<div class="an_secn1_opt an_dely_scen2">
+						<span class="secn_pic_tips an_secn6_tips"></span>
+					</div>
+				</div>
+				<div class="secn-arrow-bottom">
+					<span class="uparr_box"><img src="../my_wb_2016/images/arrow-bottom.png?id=201612271615" alt=""></span>
+				</div>
+			</section>
+			<!-- 最热话题词 end -->
+
+			<!-- 抽奖＊许愿 start -->
+			<section class="swiper-slide screen07">
+				<div class="vh_box">
+					<!-- 抽奖提示页面 start   这部分的图片路径修改过-->
+                    <div class="secn_result" style="display:">
+                         <span class="secn_pic_star an_draw_bg">
+                            <img src="../my_wb_2016/images/secn_07_star.png?id=201612271615" alt="">
+                        </span>
+                        <span class="secn_pic_paopao an_draw_bg">
+                            <img src="../my_wb_2016/images/secn_07_paopao.png?id=201612271615" alt="">
+                        </span>
+                        <span class="secn_07_txtcj an_secn1_opt an_dely_scen2">
+                            <img src="../my_wb_2016/images/secn_07_txtcj.png?id=201612271615" alt="">
+                        </span>
+                        <div class="secn_07_sucessbg an_draw_bg an_dely_scen2">
+
+                            <div class="secn_07_sucebg">
+ 
+		                        <div class="secn_07_blackbox an_secn1_opt an_dely_scen2">
+		                        	<div id="con">
+			                        	<canvas id="canvas" width="" height=""></canvas>
+			                        </div>
+		                        </div>
+
+
+								<div class="secn_txt_boxs an_secn1_opt an_dely_scen2"  id="txt" style="display: none;">
+									<!-- <span class="secn_07_suctxt">
+	                                    <span>
+	                                        刚与奖品擦身而过，
+	                                    </span>
+	                                    <span>
+	                                        没关系，快来许个愿望吧！
+	                                    </span>
+	                                </span> -->
+	                                <span class="secn_07_suctxt">
+	                                    <span>
+	                                        恭喜亲，一不小心就中奖啦！
+	                                    </span>
+	                                    <span>
+	                                        趁着好运头快来许个愿吧！
+	                                    </span>
+	                                </span>
+	                                <span class="secn_07_suctxttwo">
+	                                	<!-- <input type="text" class="bd_line" value=" 新的一年，愿你有个美好的前程！">
+                                   	 	<input type="text" class="bd_line" value="工作顺利，身体安康！"> -->
+                                   	 	<div class="inp_txts"><textarea>新的一年，愿你有个美好的前程！工作顺利，身体安康！</textarea></div>
+
+	                                </span>
+	                                <span class="secn_07_succhange">
+	                                        <img src="../my_wb_2016/images/secn_07_changeon.png?id=201612271615" alt="">
+	                                </span>
+								</div>
+                            </div>
+                        </div>
+
+                        <span class="secn_07_share an_secn1_opt an_dely_scen2">
+                            <a href="javascript:void(0)" class="secn_07_sharel">分享</a>
+                        </span>
+
+                        
+
+                        <div class="secn_boo_float an_tbot">
+	                        <span class="secn_07_book an_lf">
+	                            <img src="../my_wb_2016/images/secn_07_book.png?id=201612271615" alt="">
+	                        </span>
+                        </div>
+						
+                        <span class="secn_07_pc an_rg">
+                            <img src="../my_wb_2016/images/secn_07_pc.png?id=201612271615" alt="">
+                        </span>
+
+                        <div class="secn_float_earth an_tbot dely_suspen">
+                        	<span class="secn_07_earth an_rg">
+	                            <img src="../my_wb_2016/images/secn_07_earth.png?id=201612271615" alt="">
+	                        </span>
+                        </div>
+	                        
+                        <span class="secn_07_txtbtotwo an_secn1_opt an_dely_scen2">
+                            <img src="../my_wb_2016/images/secn_07_btotxt.png?id=201612271615" alt="">
+                        </span>
+
+                        <span class="secn winning_txt">中奖的用户稍后@新浪数据中心 会私信联系您~</span>
+                        
+                    </div>
+                    <!-- 抽奖提示页面 end-->
+                    <!-- 抽奖结果start -->
+                    <!-- <div class="secn_result" style="display:none ">
+                        <span class="secn_pic_star an_draw_bg">
+                        <img src="../my_wb_2016/images/secn_07_star.png?id=201612271615" alt="">
+                        </span>
+                        <span class="secn_pic_paopao an_draw_bg">
+                            <img src="../my_wb_2016/images/secn_07_paopao.png?id=201612271615" alt="">
+                        </span>
+                        <span class="secn_07_txtcj an_secn1_opt an_dely_scen2">
+                            <img src="../my_wb_2016/images/secn_07_txtcj.png?id=201612271615" alt="">
+                        </span>
+                        <span class="secn_07_sucessbg an_secn1_opt an_dely_scen2">
+                            <span class="secn_07_starline2">
+                                <img src="../my_wb_2016/images/secn_07_starline.png?id=201612271615" alt="">
+                            </span>
+                            <span class="secn_07_sucebg">
+                                
+                            </span>
+                        </span>
+                        <span class="secn_07_share an_secn1_opt an_dely_scen2">
+                            <a href="javascript:void(0)" class="secn_07_sharel"></a>
+                        </span>
+
+						<div class="secn_boo_float an_tbot">
+	                        <span class="secn_07_book an_lf">
+	                            <img src="../my_wb_2016/images/secn_07_book.png?id=201612271615" alt="">
+	                        </span>
+                        </div>
+						
+                        <span class="secn_07_pc an_rg">
+                            <img src="../my_wb_2016/images/secn_07_pc.png?id=201612271615" alt="">
+                        </span>
+
+                        <div class="secn_float_earth an_tbot dely_suspen">
+                        	<span class="secn_07_earth an_rg">
+	                            <img src="../my_wb_2016/images/secn_07_earth.png?id=201612271615" alt="">
+	                        </span>
+                        </div>
+	                        
+                        <span class="secn_07_txtbtotwo an_secn1_opt an_dely_scen2">
+                            <img src="../my_wb_2016/images/secn_07_btotxt.png?id=201612271615" alt="">
+                        </span>
+                    </div> -->
+                    <!-- 抽奖结果end -->
+				</div>
+			</section>
+			<!-- 抽奖＊许愿 end -->
+		</div>
+	</div>
+
+</article>
+<section class="m-box-col m-box-center" style="display: none;">
+			<!--popup开始-->
+			<div class="m-popup">
+				<div class="m-box m-box-dir m-box-center">
+					<header>
+						<div class="m-loading m-loading-light"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+					</header>
+					<h3>提示文案</h3>
+				</div>
+			</div>
+</section>
+<section class="m-box-col m-box-center" style="display: none;">
+	<!--popup开始-->
+	<div class="m-popup">
+		<div class="m-box m-box-dir m-box-center">
+			<header>
+				<i class="m-font m-font-warn"></i>
+			</header>
+			<h3>请在微博客户端内<br/>打开链接分享</h3>
+		</div>
+	</div>
+</section>
+<script src="../my_wb_2016/script/swiper.min.js"></script>
+<script src="../my_wb_2016/script/app.js"></script>
+<script src="../my_wb_2016/script/jquery-1.8.0.js"> </script>
+<script src="../my_wb_2016/script/friend2016.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
